@@ -1,0 +1,6 @@
+[submodule "src/src/SpeechTokenizer"]
+	path = src/src/SpeechTokenizer
+	url = https://github.com/ZhangXInFD/SpeechTokenizer.git
+[submodule "src/SpeechTokenizer"]
+	path = src/SpeechTokenizer
+	url = https://github.com/ZhangXInFD/SpeechTokenizer.git
