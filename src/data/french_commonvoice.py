@@ -5,7 +5,7 @@ from tqdm import tqdm
 import datasets
 
 
-def build_datafram(tsv_path: str, root_path: str):
+def build_dataframe(tsv_path: str, root_path: str):
     with open(tsv_path, "r") as tsv:
         next(tsv)  # ignore header
         tsv, for_total = tee(tsv, 2)
@@ -27,7 +27,7 @@ def build_hf_datasets(tsv_path: str, root_path: str):
         }
     )
     dataset = datasets.Dataset.from_generator(
-        build_datafram,
+        build_dataframe,
         features=features,
         gen_kwargs={"tsv_path": tsv_path, "root_path": root_path},
     ).cast_column("audio", datasets.Audio())
